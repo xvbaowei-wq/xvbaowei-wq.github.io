@@ -1,0 +1,96 @@
+baseURL: "https://xvbaowei-wq.github.io/"
+languageCode: "zh-cn"
+defaultContentLanguage: "zh"
+title: "轨迹与场"
+theme: "PaperMod"
+paginate: 10
+enableRobotsTXT: true
+hasCJKLanguage: true
+
+taxonomies:
+  category: categories
+  tag: tags
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+
+params:
+  env: production
+  title: "轨迹与场"
+  description: "从轨迹到场，从公式到物理。个人研究主页与知识库。"
+  author: "保伟"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  math: true
+  assets:
+    disableHLJS: true
+  label:
+    text: "轨迹与场"
+  homeInfoParams:
+    Title: "轨迹与场 · Trajectories & Fields"
+    Content: "从轨迹到场，从公式到物理。"
+  socialIcons:
+    - name: github
+      url: "https://github.com/xvbaowei-wq"
+
+menu:
+  main:
+    - identifier: plasma-physics
+      name: "等离子体物理"
+      url: /plasma-physics/
+      weight: 10
+    - identifier: fusion
+      name: "核聚变"
+      url: /fusion/
+      weight: 20
+    - identifier: magnetic-nozzle
+      name: "磁喷管"
+      url: /magnetic-nozzle/
+      weight: 30
+    - identifier: robotics
+      name: "机器人"
+      url: /robotics/
+      weight: 40
+    - identifier: mathematics
+      name: "数学"
+      url: /mathematics/
+      weight: 50
+    - identifier: notes
+      name: "笔记"
+      url: /notes/
+      weight: 60
+    - identifier: search
+      name: "搜索"
+      url: /search/
+      weight: 70
+    - identifier: archives
+      name: "归档"
+      url: /archives/
+      weight: 80
+    - identifier: about
+      name: "关于"
+      url: /about/
+      weight: 90
+

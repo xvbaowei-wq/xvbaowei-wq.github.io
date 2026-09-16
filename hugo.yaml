@@ -62,35 +62,15 @@ menu:
       name: "等离子体物理"
       url: /plasma-physics/
       weight: 10
-    - identifier: fusion
-      name: "核聚变"
-      url: /fusion/
-      weight: 20
-    - identifier: magnetic-nozzle
-      name: "磁喷管"
-      url: /magnetic-nozzle/
-      weight: 30
-    - identifier: robotics
-      name: "机器人"
-      url: /robotics/
-      weight: 40
-    - identifier: mathematics
-      name: "数学"
-      url: /mathematics/
-      weight: 50
-    - identifier: notes
-      name: "笔记"
-      url: /notes/
-      weight: 60
     - identifier: search
       name: "搜索"
       url: /search/
-      weight: 70
+      weight: 20
     - identifier: archives
       name: "归档"
       url: /archives/
-      weight: 80
+      weight: 30
     - identifier: about
       name: "关于"
       url: /about/
-      weight: 90
+      weight: 40

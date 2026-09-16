@@ -31,9 +31,3 @@ git push
 ## 内容目录
 
 - `content/plasma-physics/`：等离子体物理
-- `content/fusion/`：核聚变
-- `content/magnetic-nozzle/`：磁喷管
-- `content/robotics/`：机器人
-- `content/mathematics/`：数学
-- `content/notes/`：学习笔记
-

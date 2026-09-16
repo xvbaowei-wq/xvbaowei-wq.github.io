@@ -8,7 +8,7 @@
     <p>从轨迹到场，从公式到物理。</p>
     <p>这里是保伟的个人研究主页与知识库，长期记录等离子体物理、磁喷管、核聚变、机器人算法与数学推导。</p>
   </div>
-  {{- partial "social_icons.html" site.Params.socialIcons -}}
+  {{- partial "social_icons.html" (dict "icons" site.Params.socialIcons "align" "left") -}}
 </article>
 
 <h2 class="section-heading">研究方向</h2>
@@ -32,4 +32,3 @@
 </article>
 {{- end }}
 {{- end }}
-

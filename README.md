@@ -28,6 +28,4 @@ git push
 
 推送到 `main` 后，GitHub Actions 会自动构建并部署网站。
 
-## 内容目录
-
-- `content/plasma-physics/`：等离子体物理
+文章分类将在实际内容形成后按需建立，不预设空目录。

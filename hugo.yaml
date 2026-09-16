@@ -58,19 +58,15 @@ params:
 
 menu:
   main:
-    - identifier: plasma-physics
-      name: "等离子体物理"
-      url: /plasma-physics/
-      weight: 10
     - identifier: search
       name: "搜索"
       url: /search/
-      weight: 20
+      weight: 10
     - identifier: archives
       name: "归档"
       url: /archives/
-      weight: 30
+      weight: 20
     - identifier: about
       name: "关于"
       url: /about/
-      weight: 40
+      weight: 30

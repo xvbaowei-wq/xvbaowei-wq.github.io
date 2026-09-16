@@ -11,19 +11,16 @@
   {{- partial "social_icons.html" (dict "icons" site.Params.socialIcons "align" "left") -}}
 </article>
 
-<h2 class="section-heading">内容结构</h2>
-<nav class="research-grid" aria-label="研究方向">
-  <a class="research-card" href="{{ "plasma-physics/" | relURL }}"><strong>等离子体物理</strong><span>单粒子运动、波、流体理论与动理学</span></a>
-</nav>
-
-<h2 class="section-heading">最新文章</h2>
 {{- $pages := where site.RegularPages "Type" "not in" (slice "page") }}
-{{- range first 8 $pages.ByDate.Reverse }}
+{{- with $pages }}
+<h2 class="section-heading">最新文章</h2>
+{{- range first 8 .ByDate.Reverse }}
 <article class="post-entry">
   <header class="entry-header"><h2>{{ .Title }}</h2></header>
   {{- if .Description }}<div class="entry-content"><p>{{ .Description }}</p></div>{{ end }}
   <footer class="entry-footer">{{- partial "post_meta.html" . -}}</footer>
   <a class="entry-link" aria-label="打开文章：{{ .Title }}" href="{{ .Permalink }}"></a>
 </article>
+{{- end }}
 {{- end }}
 {{- end }}

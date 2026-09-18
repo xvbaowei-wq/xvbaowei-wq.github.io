@@ -304,8 +304,8 @@ d\Phi
 &\quad + r\frac{\partial B_z}{\partial z}dr\thinspace{}d\theta\thinspace{}dz \\
 &= \left[
 \frac{\partial(rB_r)}{\partial r}
-+ \frac{\partial B_\theta}{\partial\theta}
-+ r\frac{\partial B_z}{\partial z}
+{}+ \frac{\partial B_\theta}{\partial\theta}
+{}+ r\frac{\partial B_z}{\partial z}
 \right]dr\thinspace{}d\theta\thinspace{}dz.
 \end{aligned}
 $$
@@ -331,8 +331,8 @@ $$
 \nabla\cdot\mathbf B =
 \frac1r\left[
 \frac{\partial(rB_r)}{\partial r}
-+ \frac{\partial B_\theta}{\partial\theta}
-+ r\frac{\partial B_z}{\partial z}
+{}+ \frac{\partial B_\theta}{\partial\theta}
+{}+ r\frac{\partial B_z}{\partial z}
 \right]
 }.
 $$
@@ -354,7 +354,7 @@ $$
 $$
 \nabla\cdot\mathbf B =
 \frac1r\frac{\partial(rB_r)}{\partial r}
-+ \frac{\partial B_z}{\partial z}.
+{}+ \frac{\partial B_z}{\partial z}.
 $$
 
 Maxwell 方程又规定
@@ -368,7 +368,7 @@ $$
 $$
 \boxed{
 \frac1r\frac{\partial(rB_r)}{\partial r}
-+ \frac{\partial B_z}{\partial z}
+{}+ \frac{\partial B_z}{\partial z}
 =0
 }.
 $$

@@ -35,7 +35,7 @@ $$
 
 下面从一个很小的柱坐标体元开始。
 
-> 原手稿图示：取柱坐标下的一个微小扇形体元，三个方向的尺度分别为 $dr$、$r\thinspaced\theta$ 和 $dz$。
+> 原手稿图示：取柱坐标下的一个微小扇形体元，三个方向的尺度分别为 $dr$、$r\thinspace{}d\theta$ 和 $dz$。
 
 体元的范围为
 
@@ -48,13 +48,13 @@ $$
 三个方向上的微小长度分别为
 
 $$
-dr,\qquad r\thinspaced\theta,\qquad dz,
+dr,\qquad r\thinspace{}d\theta,\qquad dz,
 $$
 
 所以体积近似为
 
 $$
-dV=r\thinspacedr\thinspaced\theta\thinspacedz.
+dV=r\thinspace{}dr\thinspace{}d\theta\thinspace{}dz.
 $$
 
 现在计算这个体元六个面的净流出磁通。
@@ -64,7 +64,7 @@ $$
 磁通微元为
 
 $$
-d\Phi=\mathbf B\cdot\hat{\mathbf n}\thinspacedA,
+d\Phi=\mathbf B\cdot\hat{\mathbf n}\thinspace{}dA,
 $$
 
 其中 $dA$ 是面元面积，$\hat{\mathbf n}$ 是该面的外法向。
@@ -74,14 +74,14 @@ $$
 先看位于 $r$ 处的内侧面。其面积为
 
 $$
-dA_{r,\mathrm{in}}=r\thinspaced\theta\thinspacedz.
+dA_{r,\mathrm{in}}=r\thinspace{}d\theta\thinspace{}dz.
 $$
 
 内侧面的外法向是 $-\hat{\mathbf r}$，因此
 
 $$
 d\Phi_{r,\mathrm{in}} =
-\mathbf B(r,\theta,z)\cdot(-\hat{\mathbf r})\thinspacer\thinspaced\theta\thinspacedz.
+\mathbf B(r,\theta,z)\cdot(-\hat{\mathbf r})\thinspace{}r\thinspace{}d\theta\thinspace{}dz.
 $$
 
 因为 $\hat{\mathbf r}$、$\hat{\boldsymbol\theta}$、$\hat{\mathbf z}$ 两两正交，
@@ -95,20 +95,20 @@ $$
 
 $$
 d\Phi_{r,\mathrm{in}} =
--B_r(r,\theta,z)\thinspacer\thinspaced\theta\thinspacedz.
+-B_r(r,\theta,z)\thinspace{}r\thinspace{}d\theta\thinspace{}dz.
 $$
 
 再看位于 $r+dr$ 处的外侧面，其面积为
 
 $$
-dA_{r,\mathrm{out}}=(r+dr)d\theta\thinspacedz.
+dA_{r,\mathrm{out}}=(r+dr)d\theta\thinspace{}dz.
 $$
 
 该处的磁场为 $\mathbf B(r+dr,\theta,z)$，外法向为 $+\hat{\mathbf r}$，因此
 
 $$
 d\Phi_{r,\mathrm{out}} =
-\mathbf B(r+dr,\theta,z)\cdot\hat{\mathbf r}\thinspace(r+dr)d\theta\thinspacedz.
+\mathbf B(r+dr,\theta,z)\cdot\hat{\mathbf r}\thinspace{}(r+dr)d\theta\thinspace{}dz.
 $$
 
 又因为
@@ -122,7 +122,7 @@ $$
 
 $$
 d\Phi_{r,\mathrm{out}} =
-B_r(r+dr,\theta,z)(r+dr)d\theta\thinspacedz.
+B_r(r+dr,\theta,z)(r+dr)d\theta\thinspace{}dz.
 $$
 
 两个径向面的净流出为
@@ -131,7 +131,7 @@ $$
 \begin{aligned}
 d\Phi_r
 &=d\Phi_{r,\mathrm{out}}+d\Phi_{r,\mathrm{in}}\\
-&=\left[(r+dr)B_r(r+dr,\theta,z)-rB_r(r,\theta,z)\right]d\theta\thinspacedz.
+&=\left[(r+dr)B_r(r+dr,\theta,z)-rB_r(r,\theta,z)\right]d\theta\thinspace{}dz.
 \end{aligned}
 $$
 
@@ -144,7 +144,7 @@ $$
 则
 
 $$
-d\Phi_r=[f(r+dr)-f(r)]d\theta\thinspacedz.
+d\Phi_r=[f(r+dr)-f(r)]d\theta\thinspace{}dz.
 $$
 
 由导数定义
@@ -164,7 +164,7 @@ $$
 因此
 
 $$
-\boxed{d\Phi_r = \frac{\partial(rB_r)}{\partial r}\thinspacedr\thinspaced\theta\thinspacedz}.
+\boxed{d\Phi_r = \frac{\partial(rB_r)}{\partial r}\thinspace{}dr\thinspace{}d\theta\thinspace{}dz}.
 $$
 
 ## $\theta$ 方向两个面的磁通
@@ -174,23 +174,23 @@ $$
 位于 $\theta$ 处的面，其面积为
 
 $$
-dA_\theta=dr\thinspacedz,
+dA_\theta=dr\thinspace{}dz,
 $$
 
 外法向为 $-\hat{\boldsymbol\theta}$。因此
 
 $$
 d\Phi_{\theta,\mathrm{in}} =
-\mathbf B(r,\theta,z)\cdot(-\hat{\boldsymbol\theta})\thinspacedr\thinspacedz =
--B_\theta(r,\theta,z)\thinspacedr\thinspacedz.
+\mathbf B(r,\theta,z)\cdot(-\hat{\boldsymbol\theta})\thinspace{}dr\thinspace{}dz =
+-B_\theta(r,\theta,z)\thinspace{}dr\thinspace{}dz.
 $$
 
 另一面位于 $\theta+d\theta$，外法向为 $+\hat{\boldsymbol\theta}$，所以
 
 $$
 d\Phi_{\theta,\mathrm{out}} =
-\mathbf B(r,\theta+d\theta,z)\cdot\hat{\boldsymbol\theta}\thinspacedr\thinspacedz =
-B_\theta(r,\theta+d\theta,z)\thinspacedr\thinspacedz.
+\mathbf B(r,\theta+d\theta,z)\cdot\hat{\boldsymbol\theta}\thinspace{}dr\thinspace{}dz =
+B_\theta(r,\theta+d\theta,z)\thinspace{}dr\thinspace{}dz.
 $$
 
 因此净流出为
@@ -199,7 +199,7 @@ $$
 \begin{aligned}
 d\Phi_\theta
 &=d\Phi_{\theta,\mathrm{out}}+d\Phi_{\theta,\mathrm{in}}\\
-&=\left[B_\theta(r,\theta+d\theta,z)-B_\theta(r,\theta,z)\right]dr\thinspacedz.
+&=\left[B_\theta(r,\theta+d\theta,z)-B_\theta(r,\theta,z)\right]dr\thinspace{}dz.
 \end{aligned}
 $$
 
@@ -214,24 +214,24 @@ $$
 于是
 
 $$
-\boxed{d\Phi_\theta = \frac{\partial B_\theta}{\partial\theta}\thinspacedr\thinspaced\theta\thinspacedz}.
+\boxed{d\Phi_\theta = \frac{\partial B_\theta}{\partial\theta}\thinspace{}dr\thinspace{}d\theta\thinspace{}dz}.
 $$
 
 ## $z$ 方向两个面的磁通
 
 > 原手稿图示：$z$ 方向底面和顶面分别位于 $z$ 与 $z+dz$，对应外法向为 $-\hat{\mathbf z}$ 与 $+\hat{\mathbf z}$。
 
-底面位于 $z$，顶面位于 $z+dz$。底面的两条边分别为 $dr$ 和 $r\thinspaced\theta$，所以
+底面位于 $z$，顶面位于 $z+dz$。底面的两条边分别为 $dr$ 和 $r\thinspace{}d\theta$，所以
 
 $$
-dA_z=r\thinspacedr\thinspaced\theta.
+dA_z=r\thinspace{}dr\thinspace{}d\theta.
 $$
 
 底面的外法向为 $-\hat{\mathbf z}$，因此
 
 $$
 d\Phi_{z,\mathrm{in}} =
-\mathbf B(r,\theta,z)\cdot(-\hat{\mathbf z})\thinspacer\thinspacedr\thinspaced\theta.
+\mathbf B(r,\theta,z)\cdot(-\hat{\mathbf z})\thinspace{}r\thinspace{}dr\thinspace{}d\theta.
 $$
 
 由于
@@ -244,14 +244,14 @@ $$
 
 $$
 d\Phi_{z,\mathrm{in}} =
--B_z(r,\theta,z)\thinspacer\thinspacedr\thinspaced\theta.
+-B_z(r,\theta,z)\thinspace{}r\thinspace{}dr\thinspace{}d\theta.
 $$
 
 顶面位于 $z+dz$，外法向为 $+\hat{\mathbf z}$，因此
 
 $$
 d\Phi_{z,\mathrm{out}} =
-B_z(r,\theta,z+dz)\thinspacer\thinspacedr\thinspaced\theta.
+B_z(r,\theta,z+dz)\thinspace{}r\thinspace{}dr\thinspace{}d\theta.
 $$
 
 净流出为
@@ -260,7 +260,7 @@ $$
 \begin{aligned}
 d\Phi_z
 &=d\Phi_{z,\mathrm{out}}+d\Phi_{z,\mathrm{in}}\\
-&=\left[B_z(r,\theta,z+dz)-B_z(r,\theta,z)\right]r\thinspacedr\thinspaced\theta.
+&=\left[B_z(r,\theta,z+dz)-B_z(r,\theta,z)\right]r\thinspace{}dr\thinspace{}d\theta.
 \end{aligned}
 $$
 
@@ -275,7 +275,7 @@ $$
 因此
 
 $$
-\boxed{d\Phi_z = r\frac{\partial B_z}{\partial z}\thinspacedr\thinspaced\theta\thinspacedz}.
+\boxed{d\Phi_z = r\frac{\partial B_z}{\partial z}\thinspace{}dr\thinspace{}d\theta\thinspace{}dz}.
 $$
 
 ## 得到柱坐标下的 $\nabla\cdot\mathbf B$
@@ -291,14 +291,14 @@ $$
 $$
 \begin{aligned}
 d\Phi
-&= \frac{\partial(rB_r)}{\partial r}dr\thinspaced\theta\thinspacedz \\
-&\quad + \frac{\partial B_\theta}{\partial\theta}dr\thinspaced\theta\thinspacedz \\
-&\quad + r\frac{\partial B_z}{\partial z}dr\thinspaced\theta\thinspacedz \\
+&= \frac{\partial(rB_r)}{\partial r}dr\thinspace{}d\theta\thinspace{}dz \\
+&\quad + \frac{\partial B_\theta}{\partial\theta}dr\thinspace{}d\theta\thinspace{}dz \\
+&\quad + r\frac{\partial B_z}{\partial z}dr\thinspace{}d\theta\thinspace{}dz \\
 &= \left[
 \frac{\partial(rB_r)}{\partial r}
 + \frac{\partial B_\theta}{\partial\theta}
 + r\frac{\partial B_z}{\partial z}
-\right]dr\thinspaced\theta\thinspacedz.
+\right]dr\thinspace{}d\theta\thinspace{}dz.
 \end{aligned}
 $$
 
@@ -313,7 +313,7 @@ $$
 由于
 
 $$
-dV=r\thinspacedr\thinspaced\theta\thinspacedz,
+dV=r\thinspace{}dr\thinspace{}d\theta\thinspace{}dz,
 $$
 
 所以
@@ -397,7 +397,7 @@ $$
 \int_0^r
 \frac{\partial(r'B_r)}{\partial r'}dr' =
 -\frac{\partial B_z}{\partial z}
-\int_0^r r'\thinspacedr'.
+\int_0^r r'\thinspace{}dr'.
 $$
 
 于是

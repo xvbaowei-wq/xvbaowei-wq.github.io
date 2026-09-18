@@ -20,6 +20,114 @@ outputs:
 
 markup:
   goldmark:
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ['\\[', '\\]']
+            - ['$', '$']
+          inline:
+            - ['\\(', '\\)']
+            - ['
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+
+params:
+  env: production
+  title: "轨迹与场"
+  description: "从轨迹到场，从公式到物理。个人研究主页与知识库。"
+  author: "保伟"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  math: true
+  assets:
+    disableHLJS: true
+  label:
+    text: "轨迹与场"
+  homeInfoParams:
+    Title: "轨迹与场 · Trajectories & Fields"
+    Content: "从轨迹到场，从公式到物理。"
+  socialIcons:
+    - name: github
+      url: "https://github.com/xvbaowei-wq"
+
+menu:
+  main:
+    - identifier: search
+      name: "搜索"
+      url: /search/
+      weight: 10
+    - identifier: archives
+      name: "归档"
+      url: /archives/
+      weight: 20
+    - identifier: about
+      name: "关于"
+      url: /about/
+      weight: 30
+, '
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+
+params:
+  env: production
+  title: "轨迹与场"
+  description: "从轨迹到场，从公式到物理。个人研究主页与知识库。"
+  author: "保伟"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  math: true
+  assets:
+    disableHLJS: true
+  label:
+    text: "轨迹与场"
+  homeInfoParams:
+    Title: "轨迹与场 · Trajectories & Fields"
+    Content: "从轨迹到场，从公式到物理。"
+  socialIcons:
+    - name: github
+      url: "https://github.com/xvbaowei-wq"
+
+menu:
+  main:
+    - identifier: search
+      name: "搜索"
+      url: /search/
+      weight: 10
+    - identifier: archives
+      name: "归档"
+      url: /archives/
+      weight: 20
+    - identifier: about
+      name: "关于"
+      url: /about/
+      weight: 30
+]
     renderer:
       unsafe: true
   highlight:

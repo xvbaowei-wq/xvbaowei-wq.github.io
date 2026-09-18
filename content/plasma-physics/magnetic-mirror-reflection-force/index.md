@@ -457,12 +457,14 @@ F_z =
 qv_\theta\frac r2\frac{\partial B_z}{\partial z}.
 $$
 
+这一步还需要明确一个局部近似：在轴线附近，把粒子相对导引中心的径向回旋位移取为回旋半径，即 $r=r_L$。
+
 利用 Larmor 回旋关系
 
-$$
+$
 qv_\theta r_L
 =-\frac{mv_\perp^2}{B},
-$$
+$
 
 可得
 
@@ -484,11 +486,17 @@ $$
 F_z=-\mu\frac{\partial B}{\partial z}.
 $$
 
-而
+严格地说，沿磁场方向的梯度定义为
 
-$$
-\frac{\partial B}{\partial z}=\nabla_\parallel B,
-$$
+$
+\nabla_\parallel B \equiv \hat{\mathbf b}\cdot\nabla B,
+$
+
+其中 $\hat{\mathbf b}=\mathbf B/B$。在当前轴线附近、磁场方向近似沿 $z$ 轴的条件下，
+
+$
+\nabla_\parallel B \simeq \frac{\partial B}{\partial z}.
+$
 
 因此最后得到
 

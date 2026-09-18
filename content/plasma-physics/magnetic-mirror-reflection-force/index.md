@@ -80,24 +80,21 @@ $$
 内侧面的外法向是 $-\hat{\mathbf r}$，因此
 
 $$
-d\Phi_{r,\mathrm{in}}
-=
+d\Phi_{r,\mathrm{in}} =
 \mathbf B(r,\theta,z)\cdot(-\hat{\mathbf r})\,r\,d\theta\,dz.
 $$
 
 因为 $\hat{\mathbf r}$、$\hat{\boldsymbol\theta}$、$\hat{\mathbf z}$ 两两正交，
 
 $$
-\mathbf B\cdot(-\hat{\mathbf r})
-=
+\mathbf B\cdot(-\hat{\mathbf r}) =
 -B_r,
 $$
 
 所以
 
 $$
-d\Phi_{r,\mathrm{in}}
-=
+d\Phi_{r,\mathrm{in}} =
 -B_r(r,\theta,z)\,r\,d\theta\,dz.
 $$
 
@@ -110,24 +107,21 @@ $$
 该处的磁场为 $\mathbf B(r+dr,\theta,z)$，外法向为 $+\hat{\mathbf r}$，因此
 
 $$
-d\Phi_{r,\mathrm{out}}
-=
+d\Phi_{r,\mathrm{out}} =
 \mathbf B(r+dr,\theta,z)\cdot\hat{\mathbf r}\,(r+dr)d\theta\,dz.
 $$
 
 又因为
 
 $$
-\mathbf B(r+dr,\theta,z)\cdot\hat{\mathbf r}
-=
+\mathbf B(r+dr,\theta,z)\cdot\hat{\mathbf r} =
 B_r(r+dr,\theta,z),
 $$
 
 所以
 
 $$
-d\Phi_{r,\mathrm{out}}
-=
+d\Phi_{r,\mathrm{out}} =
 B_r(r+dr,\theta,z)(r+dr)d\theta\,dz.
 $$
 
@@ -156,8 +150,7 @@ $$
 由导数定义
 
 $$
-\frac{df}{dr}
-=
+\frac{df}{dr} =
 \lim_{\Delta r\to0}
 \frac{f(r+\Delta r)-f(r)}{\Delta r},
 $$
@@ -192,20 +185,16 @@ $$
 外法向为 $-\hat{\boldsymbol\theta}$。因此
 
 $$
-d\Phi_{\theta,\mathrm{in}}
-=
-\mathbf B(r,\theta,z)\cdot(-\hat{\boldsymbol\theta})\,dr\,dz
-=
+d\Phi_{\theta,\mathrm{in}} =
+\mathbf B(r,\theta,z)\cdot(-\hat{\boldsymbol\theta})\,dr\,dz =
 -B_\theta(r,\theta,z)\,dr\,dz.
 $$
 
 另一面位于 $\theta+d\theta$，外法向为 $+\hat{\boldsymbol\theta}$，所以
 
 $$
-d\Phi_{\theta,\mathrm{out}}
-=
-\mathbf B(r,\theta+d\theta,z)\cdot\hat{\boldsymbol\theta}\,dr\,dz
-=
+d\Phi_{\theta,\mathrm{out}} =
+\mathbf B(r,\theta+d\theta,z)\cdot\hat{\boldsymbol\theta}\,dr\,dz =
 B_\theta(r,\theta+d\theta,z)\,dr\,dz.
 $$
 
@@ -251,8 +240,7 @@ $$
 底面的外法向为 $-\hat{\mathbf z}$，因此
 
 $$
-d\Phi_{z,\mathrm{in}}
-=
+d\Phi_{z,\mathrm{in}} =
 \mathbf B(r,\theta,z)\cdot(-\hat{\mathbf z})\,r\,dr\,d\theta.
 $$
 
@@ -265,16 +253,14 @@ $$
 所以
 
 $$
-d\Phi_{z,\mathrm{in}}
-=
+d\Phi_{z,\mathrm{in}} =
 -B_z(r,\theta,z)\,r\,dr\,d\theta.
 $$
 
 顶面位于 $z+dz$，外法向为 $+\hat{\mathbf z}$，因此
 
 $$
-d\Phi_{z,\mathrm{out}}
-=
+d\Phi_{z,\mathrm{out}} =
 B_z(r,\theta,z+dz)\,r\,dr\,d\theta.
 $$
 
@@ -340,8 +326,7 @@ $$
 散度的定义是
 
 $$
-\nabla\cdot\mathbf B
-=
+\nabla\cdot\mathbf B =
 \lim_{dV\to0}
 \frac{\text{净流出磁通}}{\text{体积}}.
 $$
@@ -356,8 +341,7 @@ $$
 
 $$
 \boxed{
-\nabla\cdot\mathbf B
-=
+\nabla\cdot\mathbf B =
 \frac1r
 \left[
 \frac{\partial(rB_r)}{\partial r}
@@ -384,8 +368,7 @@ $$
 于是
 
 $$
-\nabla\cdot\mathbf B
-=
+\nabla\cdot\mathbf B =
 \frac1r\frac{\partial(rB_r)}{\partial r}
 +
 \frac{\partial B_z}{\partial z}.
@@ -438,8 +421,7 @@ $$
 
 $$
 \int_0^r
-\frac{\partial(r'B_r)}{\partial r'}dr'
-=
+\frac{\partial(r'B_r)}{\partial r'}dr' =
 -\frac{\partial B_z}{\partial z}
 \int_0^r r'\,dr'.
 $$
@@ -447,8 +429,7 @@ $$
 于是
 
 $$
-rB_r(r)-0
-=
+rB_r(r)-0 =
 -\frac{\partial B_z}{\partial z}\frac12r^2,
 $$
 
@@ -498,8 +479,7 @@ $$
 得到
 
 $$
-F_z
-=
+F_z =
 qv_\theta\frac r2\frac{\partial B_z}{\partial z}.
 $$
 

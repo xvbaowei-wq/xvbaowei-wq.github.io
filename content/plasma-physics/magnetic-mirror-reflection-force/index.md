@@ -164,12 +164,7 @@ $$
 因此
 
 $$
-\boxed{
- d\Phi_r
- =
- \frac{\partial(rB_r)}{\partial r}
- \,dr\,d\theta\,dz
- }.
+\boxed{d\Phi_r = \frac{\partial(rB_r)}{\partial r}\,dr\,d\theta\,dz}.
 $$
 
 ## $\theta$ 方向两个面的磁通
@@ -219,12 +214,7 @@ $$
 于是
 
 $$
-\boxed{
- d\Phi_\theta
- =
- \frac{\partial B_\theta}{\partial\theta}
- \,dr\,d\theta\,dz
- }.
+\boxed{d\Phi_\theta = \frac{\partial B_\theta}{\partial\theta}\,dr\,d\theta\,dz}.
 $$
 
 ## $z$ 方向两个面的磁通
@@ -285,12 +275,7 @@ $$
 因此
 
 $$
-\boxed{
- d\Phi_z
- =
- r\frac{\partial B_z}{\partial z}
- \,dr\,d\theta\,dz
- }.
+\boxed{d\Phi_z = r\frac{\partial B_z}{\partial z}\,dr\,d\theta\,dz}.
 $$
 
 ## 得到柱坐标下的 $\nabla\cdot\mathbf B$
@@ -306,19 +291,13 @@ $$
 $$
 \begin{aligned}
 d\Phi
-&=
-\frac{\partial(rB_r)}{\partial r}dr\,d\theta\,dz
-+
-\frac{\partial B_\theta}{\partial\theta}dr\,d\theta\,dz
-+
-r\frac{\partial B_z}{\partial z}dr\,d\theta\,dz\\
-&=
-\left[
+&= \frac{\partial(rB_r)}{\partial r}dr\,d\theta\,dz \\
+&\quad + \frac{\partial B_\theta}{\partial\theta}dr\,d\theta\,dz \\
+&\quad + r\frac{\partial B_z}{\partial z}dr\,d\theta\,dz \\
+&= \left[
 \frac{\partial(rB_r)}{\partial r}
-+
-\frac{\partial B_\theta}{\partial\theta}
-+
-r\frac{\partial B_z}{\partial z}
++ \frac{\partial B_\theta}{\partial\theta}
++ r\frac{\partial B_z}{\partial z}
 \right]dr\,d\theta\,dz.
 \end{aligned}
 $$
@@ -342,13 +321,10 @@ $$
 $$
 \boxed{
 \nabla\cdot\mathbf B =
-\frac1r
-\left[
+\frac1r\left[
 \frac{\partial(rB_r)}{\partial r}
-+
-\frac{\partial B_\theta}{\partial\theta}
-+
-r\frac{\partial B_z}{\partial z}
++ \frac{\partial B_\theta}{\partial\theta}
++ r\frac{\partial B_z}{\partial z}
 \right]
 }.
 $$
@@ -370,8 +346,7 @@ $$
 $$
 \nabla\cdot\mathbf B =
 \frac1r\frac{\partial(rB_r)}{\partial r}
-+
-\frac{\partial B_z}{\partial z}.
++ \frac{\partial B_z}{\partial z}.
 $$
 
 Maxwell 方程又规定
@@ -385,8 +360,7 @@ $$
 $$
 \boxed{
 \frac1r\frac{\partial(rB_r)}{\partial r}
-+
-\frac{\partial B_z}{\partial z}
++ \frac{\partial B_z}{\partial z}
 =0
 }.
 $$

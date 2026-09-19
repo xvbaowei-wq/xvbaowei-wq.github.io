@@ -1288,10 +1288,10 @@ $$
 从近轴结果
 
 <div class="math-display">
-$
+$$
 -\mu
 \left[\frac{\partial B_z}{\partial z}\right]_{r=0}
-$
+$$
 </div>
 
 写到了
@@ -1415,9 +1415,9 @@ $$
 在这个绝热条件下，粒子快速回旋，而导引中心只感受到缓慢变化的磁场，磁矩
 
 <div class="math-display">
-$
+$$
 \mu=\frac{mv_\perp^2}{2B}
-$
+$$
 </div>
 
 才可以在非相对论的一阶绝热近似下作为不变量使用。

@@ -15,6 +15,8 @@ showToc: true
 
 磁镜为什么能够产生沿磁力线方向的反射力？
 
+以下只讨论**静态、无电场**的非相对论情形，并选择 $+z$ 方向与轴线附近的主磁场方向一致，因此在所讨论区域有 $B_z>0$。
+
 已知洛伦兹力
 
 <div class="math-display">
@@ -447,19 +449,19 @@ $$
 \mathbf B(r,\theta+d\theta,z)\cdot\hat{\boldsymbol\theta}
 &=
 \left[
-B_r\hat{\mathbf r}
+B_r(r,\theta+d\theta,z)\hat{\mathbf r}
 +
 B_\theta(r,\theta+d\theta,z)\hat{\boldsymbol\theta}
 +
-B_z\hat{\mathbf z}
+B_z(r,\theta+d\theta,z)\hat{\mathbf z}
 \right]\cdot\hat{\boldsymbol\theta}\\
 &=
-B_r(\hat{\mathbf r}\cdot\hat{\boldsymbol\theta})
+B_r(r,\theta+d\theta,z)(\hat{\mathbf r}\cdot\hat{\boldsymbol\theta})
 +
 B_\theta(r,\theta+d\theta,z)
 (\hat{\boldsymbol\theta}\cdot\hat{\boldsymbol\theta})
 +
-B_z(\hat{\mathbf z}\cdot\hat{\boldsymbol\theta})\\
+B_z(r,\theta+d\theta,z)(\hat{\mathbf z}\cdot\hat{\boldsymbol\theta})\\
 &=
 B_\theta(r,\theta+d\theta,z).
 \end{aligned}
@@ -638,16 +640,16 @@ $$
 \mathbf B(r,\theta,z+dz)\cdot\hat{\mathbf z}
 &=
 \left[
-B_r\hat{\mathbf r}
+B_r(r,\theta,z+dz)\hat{\mathbf r}
 +
-B_\theta\hat{\boldsymbol\theta}
+B_\theta(r,\theta,z+dz)\hat{\boldsymbol\theta}
 +
 B_z(r,\theta,z+dz)\hat{\mathbf z}
 \right]\cdot\hat{\mathbf z}\\
 &=
-B_r(\hat{\mathbf r}\cdot\hat{\mathbf z})
+B_r(r,\theta,z+dz)(\hat{\mathbf r}\cdot\hat{\mathbf z})
 +
-B_\theta(\hat{\boldsymbol\theta}\cdot\hat{\mathbf z})
+B_\theta(r,\theta,z+dz)(\hat{\boldsymbol\theta}\cdot\hat{\mathbf z})
 +
 B_z(r,\theta,z+dz)(\hat{\mathbf z}\cdot\hat{\mathbf z})\\
 &=
@@ -960,8 +962,8 @@ $$
 $$
 \int_0^r
 \frac{\partial(r'B_r)}{\partial r'}dr'
-=
--\frac{\partial B_z}{\partial z}
+\simeq
+-\left[\frac{\partial B_z}{\partial z}\right]_{r=0}
 \int_0^r r'\thinspace{}dr'.
 $$
 </div>
@@ -989,10 +991,11 @@ $$
 
 <div class="math-display">
 $$
--\frac{\partial B_z}{\partial z}
+-\left[\frac{\partial B_z}{\partial z}\right]_{r=0}
 \int_0^r r'\thinspace{}dr'
 =
--\frac{\partial B_z}{\partial z}\frac{r^2}{2}.
+-\frac{r^2}{2}
+\left[\frac{\partial B_z}{\partial z}\right]_{r=0}.
 $$
 </div>
 
@@ -1000,9 +1003,10 @@ $$
 
 <div class="math-display">
 $$
-rB_r(r)
-=
--\frac12r^2\frac{\partial B_z}{\partial z},
+rB_r(r,z)
+\simeq
+-\frac12r^2
+\left[\frac{\partial B_z}{\partial z}\right]_{r=0},
 $$
 </div>
 
@@ -1011,9 +1015,10 @@ $$
 <div class="math-display">
 $$
 \boxed{
-B_r(r)
-=
--\frac r2\frac{\partial B_z}{\partial z}
+B_r(r,z)
+\simeq
+-\frac r2
+\left[\frac{\partial B_z}{\partial z}\right]_{r=0}
 }.
 $$
 </div>
@@ -1127,8 +1132,9 @@ $$
 <div class="math-display">
 $$
 B_r
-=
--\frac r2\frac{\partial B_z}{\partial z},
+\simeq
+-\frac r2
+\left[\frac{\partial B_z}{\partial z}\right]_{r=0},
 $$
 </div>
 
@@ -1137,8 +1143,9 @@ $$
 <div class="math-display">
 $$
 F_z
-=
-qv_\theta\frac r2\frac{\partial B_z}{\partial z}.
+\simeq
+qv_\theta\frac r2
+\left[\frac{\partial B_z}{\partial z}\right]_{r=0}.
 $$
 </div>
 
@@ -1154,7 +1161,7 @@ qv_\theta r_L
 $$
 </div>
 
-要让它和上一式中的 $r$ 直接衔接，需要说明当前这一步所采用的局部几何图像：把导引中心取在轴线上，此时粒子绕轴线做局部 Larmor 回旋，粒子到轴线的距离就是回旋半径，
+要让它和上一式中的 $r$ 直接衔接，这里先考虑一个**导引中心恰好位于轴线上的特殊轨道**。在这个近轴局部模型中，粒子的回旋圆以轴线为中心，因此粒子到轴线的距离就是 Larmor 半径，
 
 <div class="math-display">
 $$
@@ -1244,13 +1251,13 @@ $$
 $$
 \begin{aligned}
 F_z
-&=
+&\simeq
 \frac12
 (qv_\theta r_L)
-\frac{\partial B_z}{\partial z}\\
+\left[\frac{\partial B_z}{\partial z}\right]_{r=0}\\
 &=
 -\frac{mv_\perp^2}{2B}
-\frac{\partial B_z}{\partial z}.
+\left[\frac{\partial B_z}{\partial z}\right]_{r=0}.
 \end{aligned}
 $$
 </div>
@@ -1270,19 +1277,21 @@ $$
 <div class="math-display">
 $$
 F_z
-=
--\mu\frac{\partial B_z}{\partial z}.
+\simeq
+-\mu
+\left[\frac{\partial B_z}{\partial z}\right]_{r=0}.
 $$
 </div>
 
 ### 从 $z$ 方向写成沿磁力线方向
 
-从
+从近轴结果
 
 <div class="math-display">
-$$
--\mu\frac{\partial B_z}{\partial z}
-$$
+$
+-\mu
+\left[\frac{\partial B_z}{\partial z}\right]_{r=0}
+$
 </div>
 
 写到了
@@ -1389,7 +1398,7 @@ F_\parallel
 $$
 </div>
 
-这里最后写成标准磁镜力形式。它描述的是对快速回旋运动取平均后的慢运动结果。
+这里得到的是标准磁镜力形式。上面的显式计算针对导引中心位于轴线的近轴特例；对于一般的导引中心位置，需要对快速回旋相位做平均。一阶导引中心理论得到同样的标准结果 $F_{\parallel,\mathrm{mirror}}=-\mu\nabla_\parallel B$。
 
 ### 这一推导还隐含了什么适用条件？
 
@@ -1408,10 +1417,10 @@ $$
 <div class="math-display">
 $$
 \mu=\frac{mv_\perp^2}{2B}
-$$
+$
 </div>
 
-才可以在一阶近似下作为绝热不变量使用。
+才可以在非相对论的一阶绝热近似下作为不变量使用。
 
 ## 结论
 
@@ -1425,7 +1434,8 @@ $$
 $$
 B_r
 \simeq
--\frac r2\frac{\partial B_z}{\partial z};
+-\frac r2
+\left[\frac{\partial B_z}{\partial z}\right]_{r=0};
 $$
 </div>
 

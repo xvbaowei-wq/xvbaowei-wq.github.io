@@ -1457,7 +1457,3 @@ $$
 </div>
 
 Therefore, the “reflection force along the magnetic field line” in a magnetic mirror is not a new fundamental force applied directly along the field line. It is an effective parallel force that emerges on the guiding-center scale from the combined action of the nonuniform magnetic field, gyromotion, and $\nabla\cdot\mathbf B=0$.
-
-> This note is part of my ongoing study of plasma physics. Rather than simply memorizing $F_\parallel=-\mu\nabla_\parallel B$, I wanted to keep a complete record of where the result comes from and which approximations enter at each step.
->
-> This article is maintained as part of my personal research notes: *Trajectories & Fields*.

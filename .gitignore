@@ -2,3 +2,12 @@ public/
 resources/_gen/
 .hugo_build.lock
 
+# Local Zhihu exports may contain temporary signed draft image URLs.
+.zhihu-export/
+.medium-export/
+node_modules/
+__pycache__/
+.env
+.env.*
+*.local.json
+browser-profile/

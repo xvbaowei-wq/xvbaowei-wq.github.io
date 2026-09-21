@@ -1,8 +1,19 @@
 baseURL: "https://xvbaowei-wq.github.io/"
 languageCode: "zh-cn"
 defaultContentLanguage: "zh"
+defaultContentLanguageInSubdir: false
 title: "轨迹与场"
 theme: "PaperMod"
+languages:
+  zh:
+    languageName: "中文"
+    languageCode: "zh-cn"
+    weight: 1
+  en:
+    languageName: "English"
+    languageCode: "en-us"
+    title: "Trajectories & Fields"
+    weight: 2
 pagination:
   pagerSize: 10
 enableRobotsTXT: true

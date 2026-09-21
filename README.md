@@ -28,4 +28,26 @@ git push
 
 推送到 `main` 后，GitHub Actions 会自动构建并部署网站。
 
+## English translations and Medium preparation
+
+For an English translation, keep the same page bundle and use the Hugo language
+suffix, for example `content/plasma-physics/example/index.en.md`.  The Chinese
+default-language URL remains unchanged; English pages are served below `/en/`.
+
+The reusable tools are:
+
+```bash
+python3 tools/medium_export/translate_article.py \
+  content/plasma-physics/magnetic-mirror-reflection-force/index.md
+python3 tools/medium_export/check_article.py \
+  content/plasma-physics/magnetic-mirror-reflection-force/index.md \
+  content/plasma-physics/magnetic-mirror-reflection-force/index.en.md
+python3 tools/medium_export/prepare_medium.py \
+  content/plasma-physics/magnetic-mirror-reflection-force/index.en.md
+```
+
+The English Hugo page is the canonical source.  The Medium output is a separate
+import payload and must be checked in the live Medium Draft, especially when the
+article contains LaTeX.
+
 文章分类将在实际内容形成后按需建立，不预设空目录。

@@ -8,7 +8,7 @@ use warnings;
 use URI::Escape;
 
 my $src = "content/plasma-physics/magnetic-mirror-reflection-force/index.en.md";
-my $outdir = "content/medium-import/magnetic-mirror";
+my $outdir = "content/medium-import/mm-v2";
 my $eqdir = "$outdir/eq";
 mkdir "content/medium-import" unless -d "content/medium-import";
 mkdir $outdir unless -d $outdir;

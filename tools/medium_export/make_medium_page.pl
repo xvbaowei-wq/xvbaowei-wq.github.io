@@ -34,6 +34,20 @@ sub sanitize {
     return $f;
 }
 
+# captions: keep math as Unicode text (Medium turns inline images into blocks,
+# which would split captions mid-sentence)
+for my $line (split /\n/, $t) {
+    if ($line =~ /^\*Figure \d/ && $line =~ /\$/) {
+        my $orig = $line;
+        $line =~ s/\$d\\theta\$/dθ/g;
+        $line =~ s/\$\\theta\$/θ/g;
+        $line =~ s/\$dr\$/dr/g;
+        $line =~ s/\$dz\$/dz/g;
+        $line =~ s/\$z\$/z/g;
+        $t =~ s/\Q$orig\E/$line/;
+    }
+}
+
 # display blocks wrapped in math-display divs
 $t =~ s{<div class="math-display">\n\$\$\n(.*?)\n\$\$\n</div>}{
     my $f = sanitize($1);
@@ -60,6 +74,19 @@ $t =~ s{\$([^\$\n]+?)\$}{
     push @jobs, [$f, 0, $fn];
     "![]($fn)";
 }gse;
+
+# headings as raw HTML so PaperMod's anchor "#" is not generated;
+# markdown image syntax inside would not render, so use raw <img> tags
+$t =~ s{^### (.+)$}{
+    my $h = $1;
+    $h =~ s{!\[\]\((eq/[^)]+)\)}{<img alt="equation" src="$1">}g;
+    "<h3>$h</h3>";
+}gme;
+$t =~ s{^## (.+)$}{
+    my $h = $1;
+    $h =~ s{!\[\]\((eq/[^)]+)\)}{<img alt="equation" src="$1">}g;
+    "<h2>$h</h2>";
+}gme;
 
 # copy figure files referenced
 for my $img ($t =~ /!\[[^\]]*\]\((fig-[^)]+)\)/g) {

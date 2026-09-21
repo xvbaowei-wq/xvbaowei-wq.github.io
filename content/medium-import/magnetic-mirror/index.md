@@ -16,7 +16,7 @@ _build:
 
 > This note starts from magnetic-flux conservation in cylindrical coordinates. It keeps the intermediate derivation as complete as possible and adds the necessary mathematical steps and conditions of validity where a shortcut would otherwise be easy to miss.
 
-## The problem
+<h2>The problem</h2>
 
 How can a magnetic mirror produce a reflection force along a magnetic field line?
 
@@ -44,7 +44,7 @@ We begin with a small cylindrical volume element.
 
 ![Differential cylindrical volume element](fig-1-fixed.png)
 
-*Figure 1. A differential sector-shaped cylindrical volume element, showing ![](eq/inline-003.png), ![](eq/inline-004.png), and ![](eq/inline-005.png).*
+*Figure 1. A differential sector-shaped cylindrical volume element, showing dθ, dr, and dz.*
 
 The ranges of the volume element are
 
@@ -66,7 +66,7 @@ Therefore, the volume is approximately
 
 We now calculate the net outward magnetic flux through the six faces of this volume element.
 
-## The basic form of magnetic flux
+<h2>The basic form of magnetic flux</h2>
 
 The differential magnetic flux is
 
@@ -74,15 +74,15 @@ The differential magnetic flux is
 ![equation](eq/display-007.png)
 
 
-where ![](eq/inline-006.png) is the area of the surface element and ![](eq/inline-007.png) is the outward unit normal of that surface.
+where ![](eq/inline-003.png) is the area of the surface element and ![](eq/inline-004.png) is the outward unit normal of that surface.
 
-## Magnetic flux through the two radial faces
+<h2>Magnetic flux through the two radial faces</h2>
 
 ![Radial-face geometry](fig-2.webp)
 
 *Figure 2. Geometry and outward normal directions of the radial faces.*
 
-### Inner face at ![](eq/inline-008.png)
+<h3>Inner face at <img alt="equation" src="eq/inline-005.png"></h3>
 
 The area of this face is
 
@@ -90,7 +90,7 @@ The area of this face is
 ![equation](eq/display-008.png)
 
 
-The outward normal of the inner face is ![](eq/inline-009.png), so
+The outward normal of the inner face is ![](eq/inline-006.png), so
 
 
 ![equation](eq/display-009.png)
@@ -126,7 +126,7 @@ Hence,
 ![equation](eq/display-014.png)
 
 
-### Outer face at ![](eq/inline-010.png)
+<h3>Outer face at <img alt="equation" src="eq/inline-007.png"></h3>
 
 The area of this face is
 
@@ -134,13 +134,13 @@ The area of this face is
 ![equation](eq/display-015.png)
 
 
-At ![](eq/inline-011.png), the magnetic field is
+At ![](eq/inline-008.png), the magnetic field is
 
 
 ![equation](eq/display-016.png)
 
 
-The outward normal is ![](eq/inline-012.png), so
+The outward normal is ![](eq/inline-009.png), so
 
 
 ![equation](eq/display-017.png)
@@ -158,7 +158,7 @@ Therefore,
 ![equation](eq/display-019.png)
 
 
-### Net outward flux through the two radial faces
+<h3>Net outward flux through the two radial faces</h3>
 
 
 ![equation](eq/display-020.png)
@@ -188,7 +188,7 @@ From the definition of the derivative,
 ![equation](eq/display-024.png)
 
 
-Because ![](eq/inline-013.png) is infinitesimal, we can write the first-order approximation
+Because ![](eq/inline-010.png) is infinitesimal, we can write the first-order approximation
 
 
 ![equation](eq/display-025.png)
@@ -200,7 +200,7 @@ Thus,
 ![equation](eq/display-026.png)
 
 
-Here ![](eq/inline-014.png) actually comes from the multivariable function ![](eq/inline-015.png). When varying ![](eq/inline-016.png), ![](eq/inline-017.png) are held fixed, so a partial derivative should be used:
+Here ![](eq/inline-011.png) actually comes from the multivariable function ![](eq/inline-012.png). When varying ![](eq/inline-013.png), ![](eq/inline-014.png) are held fixed, so a partial derivative should be used:
 
 
 ![equation](eq/display-027.png)
@@ -212,23 +212,23 @@ Therefore,
 ![equation](eq/display-028.png)
 
 
-## Magnetic flux through the two ![](eq/inline-018.png)-direction faces
+<h2>Magnetic flux through the two <img alt="equation" src="eq/inline-015.png">-direction faces</h2>
 
 ![Theta-direction side faces](fig-3-fixed.png)
 
-*Figure 3. The ![](eq/inline-019.png)-direction side faces and their outward normal directions.*
+*Figure 3. The θ-direction side faces and their outward normal directions.*
 
-We repeat the same projection procedure for the two ![](eq/inline-020.png)-direction faces. Although the form is similar to that for the radial faces, writing it out explicitly makes each normal projection clear.
+We repeat the same projection procedure for the two ![](eq/inline-016.png)-direction faces. Although the form is similar to that for the radial faces, writing it out explicitly makes each normal projection clear.
 
-### Inner face at ![](eq/inline-021.png)
+<h3>Inner face at <img alt="equation" src="eq/inline-017.png"></h3>
 
-The two edges of this face are ![](eq/inline-022.png) and ![](eq/inline-023.png), so
+The two edges of this face are ![](eq/inline-018.png) and ![](eq/inline-019.png), so
 
 
 ![equation](eq/display-029.png)
 
 
-The outward normal of this face is ![](eq/inline-024.png), therefore
+The outward normal of this face is ![](eq/inline-020.png), therefore
 
 
 ![equation](eq/display-030.png)
@@ -264,9 +264,9 @@ Therefore,
 ![equation](eq/display-035.png)
 
 
-### Outer face at ![](eq/inline-025.png)
+<h3>Outer face at <img alt="equation" src="eq/inline-021.png"></h3>
 
-The other face is at ![](eq/inline-026.png), with outward normal ![](eq/inline-027.png):
+The other face is at ![](eq/inline-022.png), with outward normal ![](eq/inline-023.png):
 
 
 ![equation](eq/display-036.png)
@@ -284,7 +284,7 @@ Thus,
 ![equation](eq/display-038.png)
 
 
-### Net outward flux through the two ![](eq/inline-028.png) faces
+<h3>Net outward flux through the two <img alt="equation" src="eq/inline-024.png"> faces</h3>
 
 
 ![equation](eq/display-039.png)
@@ -296,7 +296,7 @@ Therefore,
 ![equation](eq/display-040.png)
 
 
-As before, hold the other variables fixed and consider only the variation in ![](eq/inline-029.png):
+As before, hold the other variables fixed and consider only the variation in ![](eq/inline-025.png):
 
 
 ![equation](eq/display-041.png)
@@ -308,21 +308,21 @@ Therefore,
 ![equation](eq/display-042.png)
 
 
-## Magnetic flux through the two ![](eq/inline-030.png)-direction faces
+<h2>Magnetic flux through the two <img alt="equation" src="eq/inline-026.png">-direction faces</h2>
 
 ![Upper and lower faces with outward normals](fig-4.webp)
 
-*Figure 4. The upper and lower ![](eq/inline-031.png)-faces and their outward normal directions.*
+*Figure 4. The upper and lower z-faces and their outward normal directions.*
 
-### Lower face at ![](eq/inline-032.png)
+<h3>Lower face at <img alt="equation" src="eq/inline-027.png"></h3>
 
-The two edges of the lower face are ![](eq/inline-033.png) and ![](eq/inline-034.png), so
+The two edges of the lower face are ![](eq/inline-028.png) and ![](eq/inline-029.png), so
 
 
 ![equation](eq/display-043.png)
 
 
-The outward normal of the lower face is ![](eq/inline-035.png), therefore
+The outward normal of the lower face is ![](eq/inline-030.png), therefore
 
 
 ![equation](eq/display-044.png)
@@ -358,9 +358,9 @@ Therefore,
 ![equation](eq/display-049.png)
 
 
-### Upper face at ![](eq/inline-036.png)
+<h3>Upper face at <img alt="equation" src="eq/inline-031.png"></h3>
 
-The outward normal of the upper face is ![](eq/inline-037.png):
+The outward normal of the upper face is ![](eq/inline-032.png):
 
 
 ![equation](eq/display-050.png)
@@ -378,7 +378,7 @@ Therefore,
 ![equation](eq/display-052.png)
 
 
-### Net outward flux through the two ![](eq/inline-038.png) faces
+<h3>Net outward flux through the two <img alt="equation" src="eq/inline-033.png"> faces</h3>
 
 
 ![equation](eq/display-053.png)
@@ -402,7 +402,7 @@ Therefore,
 ![equation](eq/display-056.png)
 
 
-## Obtaining the cylindrical-coordinate divergence from the fluxes in the three directions
+<h2>Obtaining the cylindrical-coordinate divergence from the fluxes in the three directions</h2>
 
 The total net outward magnetic flux through the six faces is
 
@@ -440,13 +440,13 @@ Therefore,
 ![equation](eq/display-062.png)
 
 
-Substitute both ![](eq/inline-039.png) and ![](eq/inline-040.png):
+Substitute both ![](eq/inline-034.png) and ![](eq/inline-035.png):
 
 
 ![equation](eq/display-063.png)
 
 
-Cancel the common factor ![](eq/inline-041.png):
+Cancel the common factor ![](eq/inline-036.png):
 
 
 ![equation](eq/display-064.png)
@@ -458,9 +458,9 @@ which is the familiar form
 ![equation](eq/display-065.png)
 
 
-## Using the axisymmetry of the magnetic mirror
+<h2>Using the axisymmetry of the magnetic mirror</h2>
 
-The magnetic mirror is invariant under rotation about the ![](eq/inline-042.png) axis, so physical quantities do not depend on ![](eq/inline-043.png). Hence,
+The magnetic mirror is invariant under rotation about the ![](eq/inline-037.png) axis, so physical quantities do not depend on ![](eq/inline-038.png). Hence,
 
 
 ![equation](eq/display-066.png)
@@ -472,7 +472,7 @@ In addition, we assume here that there is no azimuthal magnetic field:
 ![equation](eq/display-067.png)
 
 
-These two conditions must be distinguished: axisymmetry gives a zero partial derivative with respect to ![](eq/inline-044.png), whereas ![](eq/inline-045.png) is an additional assumption about the magnetic-field structure.
+These two conditions must be distinguished: axisymmetry gives a zero partial derivative with respect to ![](eq/inline-039.png), whereas ![](eq/inline-040.png) is an additional assumption about the magnetic-field structure.
 
 Thus,
 
@@ -492,7 +492,7 @@ Therefore,
 ![equation](eq/display-070.png)
 
 
-## Using ![](eq/inline-046.png) to obtain ![](eq/inline-047.png) near the axis
+<h2>Using <img alt="equation" src="eq/inline-041.png"> to obtain <img alt="equation" src="eq/inline-042.png"> near the axis</h2>
 
 From the equation above,
 
@@ -510,9 +510,9 @@ that is,
 
 *Figure 5. Magnetic field lines near the axis of a magnetic mirror; the red line marks a reference line close to the axis.*
 
-Near the axis, if ![](eq/inline-048.png) varies sufficiently slowly in space, then in the present lowest-order approximation ![](eq/inline-049.png) can be treated as approximately constant with respect to ![](eq/inline-050.png).
+Near the axis, if ![](eq/inline-043.png) varies sufficiently slowly in space, then in the present lowest-order approximation ![](eq/inline-044.png) can be treated as approximately constant with respect to ![](eq/inline-045.png).
 
-More precisely, what is required here is that **near the axis, at fixed ![](eq/inline-051.png), the variation of ![](eq/inline-052.png) with ![](eq/inline-053.png) can be neglected at the order being retained.** Under axisymmetry, near the axis we can write
+More precisely, what is required here is that **near the axis, at fixed ![](eq/inline-046.png), the variation of ![](eq/inline-047.png) with ![](eq/inline-048.png) can be neglected at the order being retained.** Under axisymmetry, near the axis we can write
 
 
 ![equation](eq/display-073.png)
@@ -524,9 +524,9 @@ Therefore,
 ![equation](eq/display-074.png)
 
 
-At the lowest retained order, ![](eq/inline-054.png) can be taken outside the integral with respect to ![](eq/inline-055.png).
+At the lowest retained order, ![](eq/inline-049.png) can be taken outside the integral with respect to ![](eq/inline-050.png).
 
-To avoid confusing the integration variable with the upper limit, write the ![](eq/inline-056.png) inside the integral as ![](eq/inline-057.png):
+To avoid confusing the integration variable with the upper limit, write the ![](eq/inline-051.png) inside the integral as ![](eq/inline-052.png):
 
 
 ![equation](eq/display-075.png)
@@ -538,7 +538,7 @@ The left-hand side integrates directly:
 ![equation](eq/display-076.png)
 
 
-On the axis, ![](eq/inline-058.png); provided ![](eq/inline-059.png) remains finite, we have
+On the axis, ![](eq/inline-053.png); provided ![](eq/inline-054.png) remains finite, we have
 
 
 ![equation](eq/display-077.png)
@@ -568,7 +568,7 @@ More rigorously, this is the lowest-order result near the axis:
 ![equation](eq/display-081.png)
 
 
-If moving in the ![](eq/inline-060.png) direction, ![](eq/inline-061.png) slowly increases,
+If moving in the ![](eq/inline-055.png) direction, ![](eq/inline-056.png) slowly increases,
 
 
 ![equation](eq/display-082.png)
@@ -580,11 +580,11 @@ then
 ![equation](eq/display-083.png)
 
 
-That is, the radial magnetic-field component points in the ![](eq/inline-062.png) direction.
+That is, the radial magnetic-field component points in the ![](eq/inline-057.png) direction.
 
-## Obtaining a force in the ![](eq/inline-063.png) direction from the radial magnetic field
+<h2>Obtaining a force in the <img alt="equation" src="eq/inline-058.png"> direction from the radial magnetic field</h2>
 
-The particle is also undergoing gyromotion; denote its azimuthal velocity by ![](eq/inline-064.png).
+The particle is also undergoing gyromotion; denote its azimuthal velocity by ![](eq/inline-059.png).
 
 The Lorentz force remains
 
@@ -592,7 +592,7 @@ The Lorentz force remains
 ![equation](eq/display-084.png)
 
 
-Under the present axisymmetric, ![](eq/inline-065.png) condition,
+Under the present axisymmetric, ![](eq/inline-060.png) condition,
 
 
 ![equation](eq/display-085.png)
@@ -604,7 +604,7 @@ Write the velocity as
 ![equation](eq/display-086.png)
 
 
-We consider only the ![](eq/inline-066.png) component of the Lorentz force. The term in the cross product that can produce a ![](eq/inline-067.png) component is
+We consider only the ![](eq/inline-061.png) component of the Lorentz force. The term in the cross product that can produce a ![](eq/inline-062.png) component is
 
 
 ![equation](eq/display-087.png)
@@ -640,7 +640,7 @@ gives
 ![equation](eq/display-092.png)
 
 
-### Relating ![](eq/inline-068.png) to the Larmor radius
+<h3>Relating <img alt="equation" src="eq/inline-063.png"> to the Larmor radius</h3>
 
 We next use
 
@@ -648,7 +648,7 @@ We next use
 ![equation](eq/display-093.png)
 
 
-To connect this directly to the ![](eq/inline-069.png) in the preceding equation, first consider a **special orbit whose guiding center lies exactly on the axis**. In this near-axis local model, the particle's gyro-orbit is centered on the axis, so the particle's distance from the axis is the Larmor radius,
+To connect this directly to the ![](eq/inline-064.png) in the preceding equation, first consider a **special orbit whose guiding center lies exactly on the axis**. In this near-axis local model, the particle's gyro-orbit is centered on the axis, so the particle's distance from the axis is the Larmor radius,
 
 
 ![equation](eq/display-094.png)
@@ -686,13 +686,13 @@ Thus,
 ![equation](eq/display-099.png)
 
 
-When ![](eq/inline-070.png),
+When ![](eq/inline-065.png),
 
 
 ![equation](eq/display-100.png)
 
 
-Because the magnitude of the gyromotion velocity is ![](eq/inline-071.png),
+Because the magnitude of the gyromotion velocity is ![](eq/inline-066.png),
 
 
 ![equation](eq/display-101.png)
@@ -704,7 +704,7 @@ we have
 ![equation](eq/display-102.png)
 
 
-Substitute this back into ![](eq/inline-072.png):
+Substitute this back into ![](eq/inline-067.png):
 
 
 ![equation](eq/display-103.png)
@@ -722,7 +722,7 @@ Then
 ![equation](eq/display-105.png)
 
 
-### Rewriting the ![](eq/inline-073.png)-direction result as a force along the magnetic field
+<h3>Rewriting the <img alt="equation" src="eq/inline-068.png">-direction result as a force along the magnetic field</h3>
 
 Starting from the near-axis result
 
@@ -744,7 +744,7 @@ and then as
 
 Two approximations are implicit in these steps and should be stated explicitly.
 
-First, near the axis the radial component ![](eq/inline-074.png) is small and the magnetic field is mainly in the ![](eq/inline-075.png) direction, so
+First, near the axis the radial component ![](eq/inline-069.png) is small and the magnetic field is mainly in the ![](eq/inline-070.png) direction, so
 
 
 ![equation](eq/display-109.png)
@@ -780,7 +780,7 @@ so
 ![equation](eq/display-114.png)
 
 
-At the same time, the ![](eq/inline-076.png) direction is approximately the magnetic-field-line direction, so
+At the same time, the ![](eq/inline-071.png) direction is approximately the magnetic-field-line direction, so
 
 
 ![equation](eq/display-115.png)
@@ -792,17 +792,17 @@ Combining these results, under the near-axis and slowly varying-field approximat
 ![equation](eq/display-116.png)
 
 
-This is the standard magnetic mirror-force form. The explicit calculation above treats the near-axis special case in which the guiding center lies on the axis; for a general guiding-center position, the fast gyro-phase must be averaged. First-order guiding-center theory gives the same standard result ![](eq/inline-077.png).
+This is the standard magnetic mirror-force form. The explicit calculation above treats the near-axis special case in which the guiding center lies on the axis; for a general guiding-center position, the fast gyro-phase must be averaged. First-order guiding-center theory gives the same standard result ![](eq/inline-072.png).
 
-### What conditions of validity are implicit in this derivation?
+<h3>What conditions of validity are implicit in this derivation?</h3>
 
-Using local Larmor gyromotion and the magnetic moment ![](eq/inline-078.png) also assumes that the magnetic field varies slowly over one Larmor-radius scale; typically,
+Using local Larmor gyromotion and the magnetic moment ![](eq/inline-073.png) also assumes that the magnetic field varies slowly over one Larmor-radius scale; typically,
 
 
 ![equation](eq/display-117.png)
 
 
-where ![](eq/inline-079.png) is the spatial scale over which the magnetic field changes significantly.
+where ![](eq/inline-074.png) is the spatial scale over which the magnetic field changes significantly.
 
 Under this adiabatic condition, the particle gyros rapidly while the guiding center experiences a slowly varying magnetic field, and the magnetic moment
 
@@ -812,11 +812,11 @@ Under this adiabatic condition, the particle gyros rapidly while the guiding cen
 
 can be used as an invariant at first adiabatic order in the non-relativistic approximation.
 
-## Conclusion
+<h2>Conclusion</h2>
 
 The logic of the derivation can be summarized as follows:
 
-1. Start from ![](eq/inline-080.png);
+1. Start from ![](eq/inline-075.png);
 2. Compute the magnetic flux through each face of a differential cylindrical volume element and derive the divergence formula;
 3. For an axisymmetric magnetic mirror with no azimuthal magnetic field, obtain near the axis
 
@@ -824,11 +824,11 @@ The logic of the derivation can be summarized as follows:
 ![equation](eq/display-119.png)
 
 
-4. The particle's gyromotion velocity ![](eq/inline-081.png) couples to the small radial magnetic field ![](eq/inline-082.png) through the Lorentz force and produces a force in the ![](eq/inline-083.png) direction;
+4. The particle's gyromotion velocity ![](eq/inline-076.png) couples to the small radial magnetic field ![](eq/inline-077.png) through the Lorentz force and produces a force in the ![](eq/inline-078.png) direction;
 5. Under the guiding-center and adiabatic approximations, average over the fast gyromotion to obtain the standard magnetic mirror force
 
 
 ![equation](eq/display-120.png)
 
 
-Therefore, the “reflection force along the magnetic field line” in a magnetic mirror is not a new fundamental force applied directly along the field line. It is an effective parallel force that emerges on the guiding-center scale from the combined action of the nonuniform magnetic field, gyromotion, and ![](eq/inline-084.png).
+Therefore, the “reflection force along the magnetic field line” in a magnetic mirror is not a new fundamental force applied directly along the field line. It is an effective parallel force that emerges on the guiding-center scale from the combined action of the nonuniform magnetic field, gyromotion, and ![](eq/inline-079.png).

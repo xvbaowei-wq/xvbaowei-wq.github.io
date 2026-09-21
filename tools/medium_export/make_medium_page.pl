@@ -8,7 +8,7 @@ use warnings;
 use URI::Escape;
 
 my $src = "content/plasma-physics/magnetic-mirror-reflection-force/index.en.md";
-my $outdir = "content/medium-import/mm-v2";
+my $outdir = "content/medium-import/mm-v3";
 my $eqdir = "$outdir/eq";
 mkdir "content/medium-import" unless -d "content/medium-import";
 mkdir $outdir unless -d $outdir;
@@ -33,6 +33,23 @@ sub sanitize {
     $f =~ s/\s*\n\s*/ /g;
     return $f;
 }
+
+# headings: replace math with Unicode text and emit raw HTML
+# (PaperMod markdown headings get anchor "#" links that Medium imports as text)
+sub heading_unicode {
+    my ($h) = @_;
+    $h =~ s/\$\\nabla\\cdot\\mathbf B=0\$/∇·B=0/g;
+    $h =~ s/\$B_r\$/Bᵣ/g;
+    $h =~ s/\$\\theta\+d\\theta\$/θ+dθ/g;
+    $h =~ s/\$\\theta\$/θ/g;
+    $h =~ s/\$r\+dr\$/r+dr/g;
+    $h =~ s/\$z\+dz\$/z+dz/g;
+    $h =~ s/\$r\$/r/g;
+    $h =~ s/\$z\$/z/g;
+    return $h;
+}
+$t =~ s{^### (.+)$}{ "<h3>" . heading_unicode($1) . "</h3>" }gme;
+$t =~ s{^## (.+)$}{ "<h2>" . heading_unicode($1) . "</h2>" }gme;
 
 # captions: keep math as Unicode text (Medium turns inline images into blocks,
 # which would split captions mid-sentence)
@@ -74,19 +91,6 @@ $t =~ s{\$([^\$\n]+?)\$}{
     push @jobs, [$f, 0, $fn];
     "![]($fn)";
 }gse;
-
-# headings as raw HTML so PaperMod's anchor "#" is not generated;
-# markdown image syntax inside would not render, so use raw <img> tags
-$t =~ s{^### (.+)$}{
-    my $h = $1;
-    $h =~ s{!\[\]\((eq/[^)]+)\)}{<img alt="equation" src="$1">}g;
-    "<h3>$h</h3>";
-}gme;
-$t =~ s{^## (.+)$}{
-    my $h = $1;
-    $h =~ s{!\[\]\((eq/[^)]+)\)}{<img alt="equation" src="$1">}g;
-    "<h2>$h</h2>";
-}gme;
 
 # copy figure files referenced
 for my $img ($t =~ /!\[[^\]]*\]\((fig-[^)]+)\)/g) {
